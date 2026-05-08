@@ -82,17 +82,17 @@ function M.check(opts)
         M.hererocks.bin("lua"),
         vim.tbl_extend("force", opts, {
           version = "-v",
-          version_pattern = "5.1",
+          version_pattern = "5.5",
         })
       )
     end
   else
     ok = Health.have("luarocks", opts)
     Health.have(
-      { "lua5.1", "lua", "lua-5.1" },
+      { "lua5.5", "lua", "lua-5.5" },
       vim.tbl_extend("force", opts, {
         version = "-v",
-        version_pattern = "5.1",
+        version_pattern = "5.5",
       })
     )
   end
